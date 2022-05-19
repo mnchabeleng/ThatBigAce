@@ -1,0 +1,151 @@
+.social-media {
+    position: fixed;
+    left: 10px;
+    top: 45%;
+    z-index: 20;
+    
+    a {
+        display: block;
+        color: $white;
+        text-decoration: none;
+        display: block;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        border-radius: 5px;
+        background-color: $red;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        transition: transform .2s ease-in-out; 
+    
+        &:hover {
+            transform: scale(1.2);
+        }
+        
+        &.facebook {
+            background-color: $facebookBlue;
+        }
+        
+        &.instagram {
+            background: $instagramBgGradient;
+        }
+        
+        &.youtube {
+            background-color: $youtubeRed;
+        }
+    }
+}
+
+.contacts {
+    position: fixed;
+    top: 25%;
+    right: 0;
+    z-index: 20;
+    transform: rotate(-90deg);
+    transform-origin: right bottom;
+    display: flex;
+    height: 30px;
+
+    @media screen and (min-width: 640px) {
+        top: 30%;
+    }
+    
+    a {
+        align-self: flex-end;
+        display: inline-block;
+        margin-left: 5px;
+        margin-right: 5px;
+        color: $white;
+        background-color: $red;
+        padding: 10px 10px;
+        text-decoration: none;
+        border-radius: 4px 4px 0 0;
+        
+        &:hover {
+            transition: padding 0.3s ease-in-out;
+            padding: 15px 10px;
+        }
+    }
+}
+
+
+.hero {
+    min-height: 100vh;
+
+    .content {
+        position: absolute;
+        top: 20%;
+        left: 0;
+        right: 0;
+        z-index: 10;
+        text-align: center;
+        padding-left: 10px;
+        padding-right: 10px;
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: $red;
+            letter-spacing: 2px;
+            list-style: none;
+        }
+
+        @media screen and (min-width: 640px) {
+            top: 35%;
+        }
+
+        @media screen and (min-width: 640px) {
+            ul li {
+                display: inline-block;
+                margin-left: 5px;
+                margin-right: 5px;
+            }
+        }
+    }
+
+    .img {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+        height: 45%;
+
+        img {
+            height: 100%;
+        }
+    }
+
+    .circle {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        clip-path: circle(30% at 50% 55%);
+        background-color: $yellow;
+
+        @media screen and (min-width: 640px) {
+            clip-path: circle(30% at 50% 60%);
+        }
+    }
+}
+
+.dark {
+    .content {
+        ul {
+            color: $lightRed;
+            text-shadow: 2px 2px $black;
+        }
+    }
+
+    .circle {
+        background-color: $darkYellow;
+    }
+}

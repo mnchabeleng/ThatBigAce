@@ -1,0 +1,102 @@
+footer {
+    background-color: $darkBlue;
+    color: $white;
+    padding: 20px 10px;
+
+    .footer-contacts a, .footer-social-media a {
+        transition: color ease-in-out 0.2s;
+
+        &:hover {
+            color: $red;
+        }
+    }
+
+    .footer-contacts a {
+        color: inherit;
+        text-decoration: none;
+        margin-right: 5px;
+    }
+    
+    .footer-social-media a {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        display: inline-block;
+        color: $white;
+        text-decoration: none;
+    }
+
+    .row {
+        padding-bottom: 10px;
+
+        .col {
+            text-align: center;
+        }
+        
+        @media screen and (min-width: 640px) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    .copyright {
+        font-family: $secondaryFont;
+        letter-spacing: 0;
+        padding-top: 10px;
+        font-size: 0.8rem;
+        border-top: 1px solid $midGray;
+        text-align: center;
+    }
+}
+
+.dark footer {
+    background-color: $black;
+}
+
+.whatsapp {
+    position: fixed;
+    z-index: 30;
+    bottom: 16px;
+    right: 10px;
+    transition: transform .4s ease-in-out;
+    
+    &.move {
+        transform : translateY(-45px);
+    }
+
+    a {
+        display: block;
+        width: 45px;
+        height: 45px;
+        line-height: 45px;
+        text-align: center;
+        background-color: $whatsappGreen;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: transform .2s ease-in-out;
+        color: $white;
+        text-decoration: none;
+        font-size: 2rem;
+    }
+}
+
+.scroll-top {
+    position: fixed;
+    z-index: 30;
+    bottom: 15px;
+    right: 15px;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    background-color: $red;
+    display: none;
+    border-radius: 50%;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform .2s ease-in-out;
+    color: $white;
+}
+

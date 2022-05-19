@@ -1,0 +1,86 @@
+/** Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+
+/** Magnific Popup */
+@import '../vendor/magnific-popup';
+
+/** AOS */
+@import '../vendor/aos.min';
+
+/** Mixins */
+@import './mixins';
+
+/** Variables */
+@import './variables';
+
+/** Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: $defaultFont;
+    background-color: #F9FAFB;
+    letter-spacing: 1px;
+
+    &.dark {
+        background-color: $darkBlue;
+        color: $white;
+    }
+}
+
+#preloader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: inherit;
+    z-index: 50;
+    font-size: 1.3rem;
+}
+
+section {
+    position: relative;
+    padding: 10px;
+}
+
+a {
+    color: $red;
+}
+
+.container {
+    max-width: $containerWidth;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/** Navbar */
+@import './navbar';
+
+/** Hero */
+@import './hero';
+
+/** About */
+@import './about';
+
+/** Services */
+@import './services';
+
+/** Gallery */
+@import './gallery';
+
+/** Contact */
+@import './contact';
+
+/** Footer */
+@import './footer';

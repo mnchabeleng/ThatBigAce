@@ -1,0 +1,181 @@
+.theme-toggle {
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    top: 10px;
+    right: 15px;
+    z-index: 40;
+    font-size: 1.6rem;
+    transition: color 0.2s ease-in-out;
+    cursor: pointer;
+    background-color: $white;
+    border-radius: 50%;
+
+    @media screen and (min-width: 640px) {
+        background-color: transparent;
+
+        &.dark {
+            color: $white;
+        }
+    }
+}
+
+.dark {
+    .theme-toggle {
+        background-color: $black;
+    }
+} 
+    
+
+.navbar {
+    position: fixed;
+    width: 250px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: $black;
+    z-index: 30;
+    box-shadow: 0px 0px 8px 1px rgba($color: $black, $alpha: 0.75);
+    display: none;
+    font-family: $secondaryFont;
+    letter-spacing: 0;
+
+    &.show {
+        display: block;
+    }
+
+    .navbar-close {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        border-radius: 50%;
+        color: $white;
+        background-color: $red;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        margin-left: auto;
+        margin-right: 10px;
+        border: 1px solid $white;
+        cursor: pointer;
+    }
+    
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    a {
+        color: $white;
+        text-decoration: none;
+        display: block;
+        padding: 8px 0;
+        border-left: 3px solid $black;
+        padding-left: 5px;
+    }
+    
+    ul li.active a {
+        border-left: 3px solid $red;
+        background-color: $darkRed;
+    }
+
+}
+
+.dark {
+    .navbar {
+        a {
+            color: $white;
+        }
+    }
+}
+
+.navbar-open {
+    position: fixed;
+    font-size: 1.8rem;
+    z-index: 10;
+    top: 10px;
+    left: 10px;
+    background-color: $white;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dark {
+    .navbar-open {
+        background-color: $black;
+    }
+}
+
+@media screen and (min-width: 640px) {
+
+    .navbar {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: transparent;
+        z-index: 30;
+        height: $navbarHeight;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background-color 0.4s ease-in-out;
+        box-shadow: none;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        
+        &.dark {
+            background-color: $black;
+
+            a {
+                color: $white;
+            }
+        }
+
+        &.show {
+            display: flex;
+        }
+
+        .navbar-close {
+            display: none;
+        }
+    
+        a {
+            color: $black;
+            display: block;
+            padding: 0 10px;
+            border-left: 0 solid $black;
+            height: $navbarHeight;
+            line-height: $navbarHeight;
+            transition: color 0.2s ease-in-out;
+        }
+
+        ul {
+            li {
+                display: inline-block;
+                
+                a:hover, &.active a {
+                    border-left: 0 solid $red;
+                    color: $red;
+                    background-color: inherit;
+                }
+            }
+        }
+
+    
+
+    }
+
+    .navbar-open {
+        display: none;
+    }
+
+}

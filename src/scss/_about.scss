@@ -1,0 +1,38 @@
+.about {
+    min-height: 100vh;
+
+    .content {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        right: 0;
+        text-align: center;
+        padding-left: 10px;
+        padding-right: 10px;
+
+        h3 {
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+
+        p {
+            font-family: $secondaryFont;
+            font-size: 1.2rem;
+        }
+
+        .img {
+            width: 150px;
+            height: 150px;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 50%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin-bottom: 20px;
+            border: 2px solid $red;
+        }
+
+    }
+}

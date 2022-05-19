@@ -1,0 +1,61 @@
+.services {
+    min-height: 100vh;
+
+    .content {
+        padding-left: 10px;
+        padding-left: 10px;
+        text-align: center;
+        
+        @media screen and (min-width: 768px) {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            transform: translateY(-50%);
+        }
+
+        h3 {
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+
+        .row {
+            
+            @media screen and (min-width: 768px) {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 10px;
+
+                .col {
+                    margin-bottom: 0;
+                }
+            }
+    
+            .col {
+                background-color: $black;
+                margin-bottom: 15px;
+                color: $white;
+
+                .img {
+                    min-height: 250px;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+
+                .body {
+                    padding: 20px 10px;
+
+                    h4 {
+                        font-size: 1.2rem;
+                    }
+                }
+
+                .footer {
+                    padding: 10px;
+                    border-top: 1px solid $darkGray;
+                }
+            }
+        }
+    }
+}
