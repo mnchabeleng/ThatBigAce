@@ -58,15 +58,15 @@
             try {
                 //$mail->SMTPDebug = SMTP::DEBUG_SERVER; //Enable verbose debug output
                 $mail->isSMTP(); //Send using SMTP
-                $mail->Host = 'smtp.mailtrap.io'; //Set the SMTP server to send through
+                $mail->Host = 'mail.thatbigace.co.za'; //Set the SMTP server to send through
                 $mail->SMTPAuth = true; //Enable SMTP authentication
-                $mail->Username = 'fad486c524220f'; //SMTP username
-                $mail->Password = '9a8ffe91534288'; //SMTP password
-                $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; //Enable implicit TLS encryption
-                $mail->Port = 2525; //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+                $mail->Username = 'mail@thatbigace.co.za'; //SMTP username
+                $mail->Password = 'jNr1R55Zj5'; //SMTP password
+                //$mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; //Enable implicit TLS encryption
+                $mail->Port = 587; //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
             
                 $mail->setFrom($email, $name);
-                $mail->addAddress('bigace@mail.com');
+                $mail->addAddress('mail@thatbigace.co.za');
                 $mail->addReplyTo($email, $name);
             
                 $mail->isHTML(true);

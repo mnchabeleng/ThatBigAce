@@ -4,7 +4,7 @@ const regex = {
 }
 
 const siteName = 'That Big Ace Production'
-const mailURL = 'https://xplusy.co.za/bigace/mail/'
+const mailURL = 'https://thatbigace.co.za/mail/'
 const themeToggle = $('.theme-toggle')
 const navbar = $('.navbar')
 const whatsappButton = $('.whatsapp')
