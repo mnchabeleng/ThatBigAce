@@ -1,6 +1,7 @@
 const gulp = require('gulp')
 const ejs = require('gulp-ejs')
 const htmlbeautify = require('gulp-html-beautify')
+const minifyInline = require('gulp-minify-inline')
 const rename = require('gulp-rename')
 const sass = require('gulp-sass')(require('sass'))
 const sourcemaps = require('gulp-sourcemaps')
@@ -21,6 +22,7 @@ exports.ejs  = () => {
     .pipe(ejs())
     .pipe(htmlbeautify())
     .pipe(rename({ extname: '.html' }))
+    .pipe(minifyInline())
     .pipe(gulp.dest(dist))
     .pipe(browserSync.stream())
 }

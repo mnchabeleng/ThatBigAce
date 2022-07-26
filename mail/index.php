@@ -71,7 +71,7 @@
             
                 $mail->isHTML(true);
                 $mail->Subject = "thatbigace.co.za: $name ($phone)";
-                $mail->Body = "<strong>thatbigace.co.za: $name ($phone)</strong><p>$message</p>";
+                $mail->Body = "<strong>thatbigace.co.za: $name ($phone)</strong><br/><p>$message</p>";
                 $mail->AltBody = $message;
             
                 $mail->send();

@@ -70,7 +70,7 @@ $('.gallery').magnificPopup({
     delegate: 'a',
     type: 'image',
     gallery: { enabled: true },
-    closeOnBgClick: false,
+    closeOnBgClick: true,
     callbacks: {
         elementParse: function(item) {
             if(item.el[0].className === 'video') {
