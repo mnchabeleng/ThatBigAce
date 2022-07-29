@@ -75,7 +75,7 @@
 
     .content {
         position: absolute;
-        top: 20%;
+        top: 45%;
         left: 0;
         right: 0;
         z-index: 10;
@@ -110,6 +110,7 @@
     }
 
     .img {
+        display: none;
         position: absolute;
         bottom: 0;
         left: 0;
@@ -119,6 +120,10 @@
 
         img {
             height: 100%;
+        }
+
+        @media screen and (min-width: 640px) {
+            display: block;
         }
     }
 
