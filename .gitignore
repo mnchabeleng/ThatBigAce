@@ -1,5 +1,6 @@
 node_modules/
+mail/config.php
 dist/
 .env
 .env.local
-requests.http
+*.http

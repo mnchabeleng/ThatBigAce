@@ -1,7 +1,5 @@
 <?php
-    /** Display all errors and warnings */
-    error_reporting(E_ALL);
-    ini_set('display_errors', '1');
+    require 'config.php';
 
     use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\SMTP;
@@ -58,15 +56,15 @@
             try {
                 //$mail->SMTPDebug = SMTP::DEBUG_SERVER; //Enable verbose debug output
                 $mail->isSMTP(); //Send using SMTP
-                $mail->Host = 'mail.thatbigace.co.za'; //Set the SMTP server to send through
+                $mail->Host = EMAIL_HOST; //Set the SMTP server to send through
                 $mail->SMTPAuth = true; //Enable SMTP authentication
-                $mail->Username = 'mail@thatbigace.co.za'; //SMTP username
-                $mail->Password = 'jNr1R55Zj5'; //SMTP password
+                $mail->Username = EMAIL_USERNAME; //SMTP username
+                $mail->Password = EMAIL_PASSWORD; //SMTP password
                 //$mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; //Enable implicit TLS encryption
                 $mail->Port = 587; //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
             
                 $mail->setFrom($email, $name);
-                $mail->addAddress('mail@thatbigace.co.za');
+                $mail->addAddress(EMAIL_ADDRESS);
                 $mail->addReplyTo($email, $name);
             
                 $mail->isHTML(true);
@@ -78,7 +76,7 @@
 
                 echo json_encode([
                     'status' => 'success',
-                    'message' => 'Message has been sent'
+                    'message' => 'Message has been sent, will get back to you soon.'
                 ]);
             } catch (Exception $e) {
                 echo json_encode([
